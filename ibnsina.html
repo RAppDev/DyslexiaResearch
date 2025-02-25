@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Selection</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .button-container button {
+            font-size: 20px;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background-color: #007BFF;
+            cursor: pointer;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+        .video-container {
+            margin-top: 30px;
+        }
+        iframe {
+            width: 80%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+        }
+    </style>
+    <script>
+        function showVideo(language) {
+            let videoSrc = "";
+            if (language === 'english') {
+                videoSrc = "https://www.youtube.com/embed/YOUR_ENGLISH_VIDEO_ID";
+            } else if (language === 'arabic') {
+                videoSrc = "https://www.youtube.com/embed/YOUR_ARABIC_VIDEO_ID";
+            }
+            document.getElementById("videoFrame").src = videoSrc;
+            document.querySelector(".video-container").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Select Your Language</h2>
+    
+    <div class="button-container">
+        <button onclick="showVideo('english')">English</button>
+        <button onclick="showVideo('arabic')">Arabic</button>
+    </div>
+
+    <div class="video-container" style="display: none;">
+        <iframe id="videoFrame" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>
