@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Selection</title>
+    <title>Historical Figures</title>
     <style>
         body {
             text-align: center;
@@ -42,9 +42,9 @@
         function showVideo(language) {
             let videoSrc = "";
             if (language === 'english') {
-                videoSrc = "https://www.youtube.com/embed/YOUR_ENGLISH_VIDEO_ID";
+                videoSrc = "https://www.youtube.com/watch?v=ngytVJv0Juw";
             } else if (language === 'arabic') {
-                videoSrc = "https://www.youtube.com/embed/YOUR_ARABIC_VIDEO_ID";
+                videoSrc = "https://www.youtube.com/watch?v=fTcijlxoP7k";
             }
             document.getElementById("videoFrame").src = videoSrc;
             document.querySelector(".video-container").style.display = "block";
@@ -53,7 +53,8 @@
 </head>
 <body>
 
-    <h2>Select Your Language</h2>
+    <h2>Ibn Sina</h2>
+    <h3>Select Your Language</h3>
     
     <div class="button-container">
         <button onclick="showVideo('english')">English</button>
